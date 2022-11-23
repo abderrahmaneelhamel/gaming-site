@@ -20,7 +20,7 @@
 </head>
 <body>
   <nav class="n">
-    <div><a href="#"><img src="img/768px-Magicdelivery_gaming_logo.svg.png" alt=""></a></div>
+    <div><a href="#"><img src="img/768px-Magicdelivery_gaming_logo.svg.png" alt="Playtech"></a></div>
     <div>
         <ul>
           <li><a href="home.php">Home</a></li>
@@ -50,7 +50,7 @@
   </div>
 
    <div>
-   <img style="width: 100%; height: auto;" src="img/Dualsense-PS5-2-removebg-preview.png" alt=""></div>
+   <img style="width: 100%; height: auto;" src="img/Dualsense-PS5-2-removebg-preview.png" alt="Playtech"></div>
   
   </section>
   <section>
