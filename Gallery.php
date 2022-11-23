@@ -10,6 +10,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Playtech has the latest gaming products">
+    <meta name="Keyword" content="Playtech,gaming,pc gamer,playstation">
+    <meta name="author" content="Playtech">
     <title>Playtech</title>
     <link rel="stylesheet" href="Style.css">
    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
