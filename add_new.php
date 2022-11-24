@@ -29,14 +29,6 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    // Check if file already exists
-    // if (file_exists($target_file)) {
-    //     echo "Sorry, file already exists.";
-    //     $uploadOk = 0;
-    // }
-
-
-    // Allow certain file formats
     if (
         $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
         && $imageFileType != "gif"
@@ -54,9 +46,6 @@ if (isset($_POST['submit'])) {
             echo "The file " . htmlspecialchars(basename($_FILES["image"]["name"])) . " has been uploaded.";
 
             $image = "uploads/" . $_FILES["image"]["name"];
-            // $image = $target_file;
-            // $sql = "INSERT INTO `produit`( `libelle`, `quantite`, `prix`, `image`, `id-categorieE`) VALUES ($nom,$qanti,$price,$image,$category)";
-            // $result = $conn->query($sql);
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
@@ -68,8 +57,6 @@ if (isset($_POST['submit'])) {
     if($resultat){
         header("location: dh.php");
     }
-    // $image = "uploads/" . $_FILES["fileToUpload"]["name"];
-    // $result->execute();
 
 }
 
@@ -81,13 +68,10 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP CRUD APP</title>
-    <!-- CSS only -->
-
+    <title>Playtech</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
     <script src="/bootstrap-5.2.2-dist/js/bootstrap.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -143,7 +127,6 @@ if (isset($_POST['submit'])) {
                     
                     </div>
                 </div>
-                submit it
                 <div class="col">
                     <div class="sub">
                     <button  type="submit" class="btn btn-success mb-4" name="submit">Save</button>

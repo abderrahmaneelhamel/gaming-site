@@ -10,9 +10,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Playtech has the latest gaming products">
-    <meta name="Keyword" content="Playtech,gaming,pc gamer,playstation">
-    <meta name="author" content="Playtech">
     <title>Playtech</title>
     <link rel="stylesheet" href="style.css">
    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -21,7 +18,7 @@
 </head>
 <body>
 <nav class="n">
-    <div><a href="#"><img src="img/768px-Magicdelivery_gaming_logo.svg.png" alt="Playtech"></a></div>
+    <div><a href="home.php"><img src="img/768px-Magicdelivery_gaming_logo.svg.png" alt=""></a></div>
     <div>
         <ul>
           <li><a href="home.php">Home</a></li>
@@ -42,7 +39,7 @@
     </div>
   </div>
 
-   <div><img style="width: 100%; height: auto;" src="img/Dualsense-PS5-2-removebg-preview.png" alt="Playtech"></div>
+   <div><img style="width: 100%; height: auto;" src="img/Dualsense-PS5-2-removebg-preview.png" alt=""></div>
 
   </section> 
   <section class="bleu">
@@ -74,20 +71,20 @@
       
     </div>
     <div class="second">
-      <span>contact us :</span>
-      <div class="contact">
-      <p style="color:rgb(0, 109, 139) ;">Phone : 0649239990</p>
-      <p style="color:rgb(0, 109, 139) ;">Email : playtech@gmail.com</p>
-      </div>
+    <span>contact us :</span>
+    <div class="contact">
+    <p style="color:rgb(0, 109, 139) ;  margin-bottom: 0px;">Phone : 0649239990</p>
+    <p style="color:rgb(0, 109, 139) ;  margin-bottom: 0px;">Email : playtech@gmail.com</p>
     </div>
-    <div class="therd">
-      <span >Categories</span>
-      <p style="color:rgb(0, 109, 139) ;"> war game</p>
-      <p style="color:rgb(0, 109, 139) ;"> soocer game</p>
-      <p style="color:rgb(0, 109, 139) ;"> racing game</p>
-    </div>
+  </div>
+  <div class="therd">
+    <span >Categories</span>
+    <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> war game</p>
+    <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> soocer game</p>
+    <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> racing game</p>
+  </div>
     <div class="copyr">
-      <span>©copyright 2023</span>
+    <span>©copyright 2021-<?php echo date("Y");?></span>
     </div>
   </footer>
   <script>

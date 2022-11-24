@@ -91,18 +91,18 @@
   <div class="second">
     <span>contact us :</span>
     <div class="contact">
-    <p style="color:rgb(0, 109, 139) ;">Phone : 0649239990</p>
-    <p style="color:rgb(0, 109, 139) ;">Email : playtech@gmail.com</p>
+    <p style="color:rgb(0, 109, 139) ;  margin-bottom: 0px;">Phone : 0649239990</p>
+    <p style="color:rgb(0, 109, 139) ;  margin-bottom: 0px;">Email : playtech@gmail.com</p>
     </div>
   </div>
   <div class="therd">
     <span >Categories</span>
-    <p style="color:rgb(0, 109, 139) ;"> war game</p>
-    <p style="color:rgb(0, 109, 139) ;"> soocer game</p>
-    <p style="color:rgb(0, 109, 139) ;"> racing game</p>
+    <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> war game</p>
+    <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> soocer game</p>
+    <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> racing game</p>
   </div>
   <div class="copyr">
-    <span>©copyright 2023</span>
+  <span>©copyright 2021-<?php echo date("Y");?></span>
   </div>
 </footer>
     <script>

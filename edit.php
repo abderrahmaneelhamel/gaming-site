@@ -89,7 +89,6 @@ if (isset($_POST['submit'])) {
                     
                     </div>
                 </div>
-                submit it
                 <div class="col">
                     <div class="sub">
                     <button  type="submit" class="btn btn-success mb-4" name="submit">Update</button>
