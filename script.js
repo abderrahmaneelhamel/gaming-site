@@ -22,7 +22,8 @@ function buy(i) {
         data[i - 1].name +
         " | price: " +
         data[i - 1].price +
-        "$";
+        "$"+"<i class='fa-solid fa-trash fs-6 me-3' onclick='deleting("+i+")'></i>";
+      d.setAttribute("id", "id"+i);
       x.appendChild(d);
       total += parseInt(data[i - 1].price);
       var t = document.getElementById("total");
@@ -30,6 +31,20 @@ function buy(i) {
     } else if (result1 == "not enough qtyy") {
       alert(result1);
     }
+  });
+}
+
+function deleting(i){
+   $.post("del.php", { id: i }, function (result) {
+   if (result == "done") {
+      var tostr = i.toString();
+      var str = "id"+tostr;
+      var element = document.getElementById(str);
+      element.remove();
+      total -= parseInt(data[i - 1].price);
+      var t = document.getElementById("total");
+      t.innerText = total + "$";
+   }
   });
 }
 
@@ -46,7 +61,12 @@ function toggle0() {
   c.style.display = "grid";
 }
 function order() {
-  alert(" Thank you for buying from us \n your order is confirmed");
+  if(total>0){
+    alert(" Thank you for buying from us \n your order is confirmed");
+    window.location.reload();
+  }else{
+    alert(" You didn't buy anything\n buy something before confirming");
+  }
 }
 function toggel() {
   var toggel = document.querySelector(".nav");
