@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 22 nov. 2022 à 17:22
+-- Généré le : lun. 12 déc. 2022 à 11:05
 -- Version du serveur : 10.4.25-MariaDB
 -- Version de PHP : 8.1.10
 
@@ -80,14 +80,18 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id-product`, `label`, `img`, `quantity`, `price`, `id-category`) VALUES
-(1, 'gaming chair', 'uploads/6458565.png', 20, 44, 1),
-(2, 'gaming mouse', 'uploads/gaming-mouse.png', 18, 33, 1),
-(3, 'pc gamer', 'uploads/DESKTOP-PC-GAMER-MAG-CODEX-5-I7-11TH-RTX-3070-MSI.png', 20, 200, 1),
-(4, 'RTX cooler', 'uploads/geforce-rtx-2060-001.png', 15, 55, 1),
-(5, 'PS5', 'uploads/005.png', 20, 200, 2),
-(6, 'ps5 controller', 'uploads/0012.png', 20, 44, 2),
-(7, 'ps5 controller', 'uploads/[CITYPNG.COM]Sony Playstation5 PS5 White Controller Design - 1996x1252.png', 18, 66, 2),
-(8, 'ps4 controller', 'uploads/ps4 controller.png', 10, 33, 2);
+(1, 'gaming chair', 'uploads/6458565.png', 18, 144, 1),
+(2, 'gaming mouse', 'uploads/gaming-mouse.png', 15, 33, 1),
+(3, 'pc gamer', 'uploads/DESKTOP-PC-GAMER-MAG-CODEX-5-I7-11TH-RTX-3070-MSI.png', 16, 200, 1),
+(4, 'RTX cooler', 'uploads/geforce-rtx-2060-001.png', 11, 55, 1),
+(5, 'PS5 console', 'uploads/005.png', 17, 200, 2),
+(6, 'ps5 controller', 'uploads/0012.png', 18, 44, 2),
+(7, 'ps5 controller', 'uploads/[CITYPNG.COM]Sony Playstation5 PS5 White Controller Design - 1996x1252.png', 16, 66, 2),
+(8, 'ps4 controller', 'uploads/ps4 controller.png', 15, 33, 2),
+(9, 'gaming keyboard', 'uploads/HYPERX-Alloy-Origins---Clavier-Gaming-(Noir).png', 19, 33, 1),
+(10, 'XboX controller', 'uploads/1024.png', 29, 44, 2),
+(11, 'Assassins Creed Valhalla', 'uploads/Best-Assassins-Creed-Valhalla-HD-and-4K-Wallpapers-8_935adec67b324b146ff212ec4c69054f.jpg', 10, 20, 2),
+(12, 'mouse', 'uploads/kisspng-computer-mouse-e-blue-auroza-type-im-computer-keyb-5b01bc5a1ebeb2.3998059815268404101259.png', 18, 33, 1);
 
 -- --------------------------------------------------------
 
@@ -161,7 +165,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id-product` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id-product` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT pour la table `users`
