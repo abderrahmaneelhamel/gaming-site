@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      .username {
+        position: relative;
+        top: 10px;
+        left: 1%;
+        color: white;
+        font-size: 17px;
+      }
+    </style>
 </head>
 <body>
   <nav class="n">
@@ -28,29 +37,27 @@
           <li><a href="Contact.php">Contact</a></li>
         </ul>
     </div>
-    <div class="carte">
-      <img id="icon" src="img/shopping-cart-30.png" alt="icon" onclick="toggle()">
-      <div class="cnt">
-      <img id="icon0" src="img/close-window-16.png" alt="icon" onclick="toggle0()">
-        <div id="bill"></div>
-        <div class="cnt1" >The Total : <span id="total"></span><a class="button1" onclick="order()">Confirm</a></div>
-      </div>
-    </div>
-    <div style="width: 30%; display: flex; justify-content: center; justify-content: space-around; padding-top:5px ">
+    <div style="width: 40%; display: flex; justify-content: center; justify-content: space-around; padding-top:5px ">
       <div class="username"><?php echo $_SESSION['user']?></div>
       <a href="disconnect.php" class="disconnect">disconnect</a>
+      <img id="icon" src="img/shopping-cart-30.png" alt="icon" onclick="toggle()">
+      <img id="icon0" src="img/close-window-16.png" alt="icon" onclick="toggle0()">
     </div>
   </nav>   
+  <div class="carte">
+    <div class="cnt">
+      <div id="bill"></div>
+      <div class="cnt1" >The Total : <span id="total"></span><a class="button1" onclick="order()">Confirm</a></div>
+    </div>
+  </div>
   <section class="container2">
    <div style="width: 400px ;">
     <h1 class="log2"  style="font-size: 80px; color:rgb(255, 255, 255);">Playtech</h1>
     <h3 style="font-size: 20px; color:rgb(255, 255, 255);padding-left: 30%;padding-bottom: 10%;" >No Game no Life</h3> 
     </div>
   </div>
-
    <div>
    <img style="width: 100%; height: auto;" src="img/Dualsense-PS5-2-removebg-preview.png" alt=""></div>
-  
   </section>
   <section>
     <div class="containerz">
@@ -59,7 +66,7 @@
        $sql="SELECT * FROM `products`";
        $resultat = mysqli_query($conn,$sql);
        while($row = mysqli_fetch_assoc($resultat)){
-      $id=$row["id-product"];
+       $id=$row["id-product"];
      ?>
      <div class="box">
       <div><img style="width: 130px;" src="<?php echo $row["img"] ?>" alt="img"></div>
@@ -73,7 +80,6 @@
  
    <section>
    
-  
     <h1 class="log2"  style="font-size: 40px; color:rgb(255, 255, 255);">Store Brands</h1><div class="container4">
      <img class="MM" style="width: 150px; height: 150px;" src="img/ea-symbole.jpg" alt="">
      <img class="MM" style="width: 150px ;height: 150px;" src="img/amd-logo-amd-letter-amd-letter-logo-design-initials-amd-logo-linked-with-circle-and-uppercase-monogram-logo-amd-typography-for-technology-business-and-real-estate-brand-vector.jpg" alt="">
@@ -108,7 +114,7 @@
     <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> racing game</p>
   </div>
     <div class="copyr">
-    <span>©copyright 2021-<?php echo date("Y");?></span>
+    <marquee direction="right">©copyright 2021-<?php echo date("Y");?></marquee>
     </div>
   </footer>
   <script

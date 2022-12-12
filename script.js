@@ -51,14 +51,18 @@ function deleting(i){
 function toggle() {
   var b = document.querySelector(".cnt");
   b.style.display = "flex";
-  var c = document.querySelector("#icon");
-  c.style.display = "none";
+  var c = document.querySelector("#icon0");
+  c.style.display = "grid";
+  var d = document.querySelector("#icon");
+  d.style.display = "none";
 }
 function toggle0() {
   var b = document.querySelector(".cnt");
   b.style.display = "none";
-  var c = document.querySelector("#icon");
-  c.style.display = "grid";
+  var c = document.querySelector("#icon0");
+  c.style.display = "none";
+  var d = document.querySelector("#icon");
+  d.style.display = "grid";
 }
 function order() {
   if(total>0){

@@ -20,16 +20,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-<nav class="n">
+<nav style="flex-direction: row; position:unset" class="n">
     <div><a href="#"><img src="img/768px-Magicdelivery_gaming_logo.svg.png" alt=""></a></div>
     <div style="height: 75px;">
         
     </div>
     <div style="width: 30%; display: flex; justify-content: center; justify-content: space-around; align-items: center; ">
       <div class="username"><?php echo $_SESSION['admin']?></div>
-      <a href="disconnect.php" class="disconnect">disconnect</a>
+      <a style="left: 40px;" href="disconnect.php" class="disconnect">disconnect</a>
     </div>
 </nav>
 <div>

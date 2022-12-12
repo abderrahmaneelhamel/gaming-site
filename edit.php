@@ -86,7 +86,6 @@ if (isset($_POST['submit'])) {
 
                         </select>
 
-                    
                     </div>
                 </div>
                 <div class="col">

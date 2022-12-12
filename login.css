@@ -185,7 +185,8 @@ form {
   .user2 {
     position: absolute;
     top: 240px;
-    left: 240px;
+    left: 200px;
+    width: 150px;
   }
   .footer {
     font-size: larger;
@@ -204,10 +205,12 @@ form {
   .copyr {
     font-size: 12px;
     position: absolute;
-    top: 1140px;
-    left: 150px;
+    top: 1130px;
+    left: 100px;
   }
   .second {
-    margin-left: 100px;
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }

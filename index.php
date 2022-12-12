@@ -11,13 +11,12 @@
     <script src="/bootstrap-5.2.2-dist/js/bootstrap.js" defer></script>
 </head>
 <body>
-
 <nav>
     <div>
         <a href="#"><img class="logo1" src="img/768px-Magicdelivery_gaming_logo.svg.png" alt="logo"></a>
     </div>
 </nav>
-<div class="cont container-sm">
+ <div class="cont container-sm">
         <form method="post" action="index.php" class="row g-3 border border-dark rounded">
             <div class="col-md-10">
               <label for="validationServer02" class="form-label">Email</label>
@@ -34,12 +33,12 @@
                 <input type="checkbox" class="form-check-input" name="admin">
                 <label class="form-check-label" >admin</label>
             </div>
-            <a href="signup.php" class="user2" >make an accont?</a>
+            <a href="signup.php" style="width: 150px ;" class="user2" >make an accont?</a>
             <div class="col-12">
               <input type="submit" name="submit" class="btn btn-primary" id="submit" value="login">  
             </div>
           </form>
-        </div>
+</div>
     <?php 
         include("connection.php");
         if(isset($_POST['submit'])){
@@ -49,7 +48,7 @@
                 $email = $_POST['user_email'];
                 $password = $_POST['user_password'];
                 $admin = $conn->prepare("SELECT * FROM `admin` WHERE `email`= ? and `password`= ?");
-                $admin->execute([$email,$password]); 
+                $admin->execute([$email,$password]);
                 $row =  $admin->fetch();
                 if(isset($row)){
                     $_SESSION['admin'] = $email;
@@ -102,7 +101,7 @@
     <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> racing game</p>
   </div>
   <div class="copyr">
-  <span>©copyright 2021-<?php echo date("Y");?></span>
+  <marquee direction="right">©copyright 2021-<?php echo date("Y");?></marquee>
   </div>
 </footer>
     <script>

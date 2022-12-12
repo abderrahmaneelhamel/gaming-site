@@ -41,33 +41,35 @@ ul {
   display: flex;
 }
 .carte {
+  top: 70px;
+  margin-left:750px;
+  position: sticky;
+  z-index: 1;
   display: flex;
   flex-direction: column;
 }
 #icon {
-  padding-top: 5px;
+  padding-top: 8px;
+  margin-left: 10px;
   width: 30px;
-  position: absolute;
-  top: 10px;
-  left: 55%;
+  height: 40px;
 }
 #icon0 {
-  padding-top: 5px;
+  padding-top: 8px;
+  margin-left: 10px;
   width: 30px;
-  position: absolute;
-  top: 10px;
-  left: 55%;
+  height: 40px;
+  display: none;
 }
 .cnt {
-  margin-top: 70px;
-  width: 700px;
+  width: 500px;
   height: auto;
   display: none;
   flex-direction: column;
   align-items: center;
   border-color: transparent;
   border-radius: 40px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.700);
   color: aliceblue;
   padding-top: 20px;
 }
@@ -76,7 +78,7 @@ ul {
   margin-bottom: 10px;
 }
 #bill {
-  width: 600px;
+  width: 480px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -98,7 +100,7 @@ ul {
 #bill div {
   margin-bottom: 10px;
   background-color: rgba(71, 49, 239, 0.301);
-  width: 460px;
+  width: 400px;
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
@@ -111,14 +113,14 @@ ul {
 .cnt1 {
   top: 1580px;
   left: 0px;
-  width: 700px;
+  width: 500px;
   height: 60px;
   font-size: large;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   border-radius: 0px 0px 40px 40px;
-  background-color: rgb(71, 49, 239);
+  background-color: rgba(71, 49, 239, 0.700);
   color: aliceblue;
   padding: 40px;
 }
@@ -129,7 +131,7 @@ ul {
   align-items: center;
   border-radius: 30px;
   justify-content: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.700);
   color: white;
   text-decoration: none;
 }
@@ -164,7 +166,7 @@ ul {
   z-index: 1;
   width: 100%;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.215);
+  background-color: rgba(0, 0, 0, 0.842);
   color: #fff;
 }
 
@@ -199,13 +201,11 @@ nav div ul li a {
   text-decoration: none;
 }
 nav div ul li a:hover {
-  font-size: larger;
   color: rgb(43, 116, 226);
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 nav div ul li a:active {
-  padding: 10px 40px;
-  color: rgb(43, 160, 226);
+  padding: 5px;
   border-radius: 10%;
   border: solid rgb(43, 160, 226);
 }
@@ -434,7 +434,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.235);
   border-radius: 10%;
   width: 200px;
-  height: auto;
+  height: 200px;
   align-items: center;
   text-align: center;
   padding-top: 2%;
@@ -481,8 +481,8 @@ footer {
   background-color: rgba(0, 0, 0, 0.235);
   border-radius: 10%;
   gap: 10;
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   align-items: center;
   text-align: center;
   padding-top: 2%;
@@ -491,8 +491,6 @@ footer {
 .boxa:hover {
   box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(49, 11, 240),
     0 0 50px rgb(15, 125, 158);
-  width: 400px;
-  height: 300px;
 }
 .footer {
   background-color: rgba(0, 0, 0, 0.233);
@@ -648,15 +646,23 @@ a {
     z-index: 55;
   }
   #icon {
-    position: relative;
-    top: 60%;
-    left: 43%;
+    position: absolute;
+    top: 70px;
+    left: 300px;
   }
   #icon0 {
     position: absolute;
-    top: 2%;
-    left: 85%;
+    top: 70px;
+    left: 300px;
     width: 30px;
+  }
+  .carte {
+    top: 80px;
+    margin-left:5px;
+    position: sticky;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
   }
   .cnt {
     position: absolute;
@@ -672,7 +678,7 @@ a {
     flex-direction: column;
     position: sticky;
     top: 0%;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.215);
     color: #fff;
@@ -691,8 +697,11 @@ a {
   .username {
     display: none !important;
   }
+  #bill{
+    width: auto;
+  }
   #bill div {
-    width: 200px;
+    width: 85%;
   }
   .button1 {
     font-size: 15px;
@@ -968,9 +977,6 @@ a {
   .boxa:hover {
     box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(49, 11, 240),
       0 0 50px rgb(15, 125, 158);
-    width: 400px;
-    height: 300px;
-    margin-left: 2%;
   }
   .footer {
     background-color: rgba(0, 0, 0, 0.233);

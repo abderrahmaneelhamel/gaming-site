@@ -49,7 +49,7 @@
     </video>
       <div class="content">
        <h1>Contact Us</h1>
-  <form class="contact-form" action="index.html" method="post">
+  <form class="contact-form" action="Contact.php" method="post">
     <input type="text" class="contact-form-text" placeholder="Your name">
     <input type="email" class="contact-form-text" placeholder="Your email">
     <input type="text" class="contact-form-text" placeholder="Your phone">
@@ -84,7 +84,7 @@
     <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> racing game</p>
   </div>
     <div class="copyr">
-    <span>©copyright 2021-<?php echo date("Y");?></span>
+    <marquee direction="right">©copyright 2021-<?php echo date("Y");?></marquee>
     </div>
   </footer>
   <script>

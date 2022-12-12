@@ -130,7 +130,7 @@
     <p style="color:rgb(0, 109, 139) ; margin-bottom: 0px;"> racing game</p>
   </div>
   <div class="copyr">
-    <span>©copyright 2021-<?php echo date("Y");?></span>
+    <marquee direction="right">©copyright 2021-<?php echo date("Y");?></marquee>
   </div>
 </footer>
 </body>
