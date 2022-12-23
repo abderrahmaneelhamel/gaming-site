@@ -3,19 +3,15 @@ include "connection.php";
 $ID=$_GET['id-product'];
 
 if (isset($_POST['submit'])) {
-    if(isset($_POST["name"])){ $name = $_POST["name"];}else{ $name = null;}
+    $nom = isset($_POST["name"]) ? $_POST["name"] : null;
     $price = isset($_POST["price"]) ? $_POST["price"] : null;
-    $category = isset($_POST["category"]) ? $_POST["category"] : null;
     $qanti = isset($_POST["qte"]) ? $_POST["qte"] : null;
-    if($nom == NULL || $qanti== NULL || $price== NULL || $image == NULL || $category== NULL){
-        header("location : dh.php?msg=error");
-    }else{
-      $sql ="UPDATE `products` SET `label`='$nom',`quantity`=$qanti,`price`=$price ,`id-category`=$category  WHERE `id-product`=$ID" ;
+    
+      $sql ="UPDATE `products` SET `label`='$nom',`quantity`=$qanti,`price`=$price   WHERE `id-product`=$ID" ;
       $resultat = mysqli_query($conn,$sql);
       if ($resultat) {
         header("Location:dh.php?msg=edited in id:$ID");
       }
-    }
 }
 
 ?>
@@ -75,7 +71,7 @@ if (isset($_POST['submit'])) {
                         <input type="text" class="form-control" name="price" value="<?php echo $row['price'] ?>">
                     </div>
                 </div>
-                <div class="col" style="position: absolute; left: 334px;">
+                <div class="ret col">
                     <div class="sub">
                     <button type="submit" class="btn btn-success m-1" name="submit">Save</button>
                     <a href="dh.php" class="btn btn-danger m-1">Cancel</a>

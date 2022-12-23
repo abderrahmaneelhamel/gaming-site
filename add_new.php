@@ -129,7 +129,7 @@ if (isset($_POST['submit'])) {
                         </select>
                     </div>
                 </div>
-                <div class="col" style="position: absolute; left: 370px;">
+                <div class="ret col" >
                     <div class="sub">
                     <button type="submit" class="btn btn-success m-1" name="submit">Save</button>
                     <a href="dh.php" class="btn btn-danger m-1">Cancel</a>

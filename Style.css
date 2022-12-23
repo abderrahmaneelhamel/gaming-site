@@ -634,12 +634,20 @@ a {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+.ret{
+  position: absolute;
+  left: 333px !important;
+}
 @media only screen and (max-width: 400px) {
   body {
     background-image: url(img/background.jpg);
     background-repeat: repeat;
     background-size: cover;
     backdrop-filter: blur(3px);
+  }
+  .ret{
+    position: absolute;
+    left: 15px !important;
   }
   .hambergermenu {
     top: 23px;
