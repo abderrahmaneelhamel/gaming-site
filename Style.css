@@ -635,6 +635,12 @@ a {
   color: rgb(255, 255, 255);
 }
 @media only screen and (max-width: 400px) {
+  body {
+    background-image: url(img/background.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    backdrop-filter: blur(3px);
+  }
   .hambergermenu {
     top: 23px;
     left: 233px;

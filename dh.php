@@ -28,14 +28,14 @@
     </div>
     <div style="width: 30%; display: flex; justify-content: center; justify-content: space-around; align-items: center; ">
       <div class="username"><?php echo $_SESSION['admin']?></div>
-      <a style="left: 40px;" href="disconnect.php" class="disconnect">disconnect</a>
+      <a style="left: 20px;" href="disconnect.php" class="disconnect">disconnect</a>
     </div>
 </nav>
 <div>
     <?php
      if (isset($_GET['msg'])) {
         $msg=$_GET['msg'];
-        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        echo '<div class="alert alert-success alert-dismissible" role="alert">
         '.$msg.'
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>';

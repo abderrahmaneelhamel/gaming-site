@@ -50,13 +50,17 @@ if (isset($_POST['submit'])) {
             echo "Sorry, there was an error uploading your file.";
         }
     }
-    
-    $sql = "INSERT INTO `products` (`label`, `quantity`, `price`, `img`, `id-category`) VALUES ( '$nom', '$qanti', '$price', '$image', '$category');";
-    $resultat = $conn->prepare($sql);
-    $resultat->execute() or die("Erreur lors de l'execution de la requete: ");
-    if($resultat){
-        header("location: dh.php");
+    if($nom == NULL || $qanti== NULL || $price== NULL || $image == NULL || $category== NULL){
+        header("location : dh.php?msg=error");
+    }else{
+        $sql = "INSERT INTO `products` (`label`, `quantity`, `price`, `img`, `id-category`) VALUES ( '$nom', '$qanti', '$price', '$image', '$category');";
+        $resultat = $conn->prepare($sql);
+        $resultat->execute() or die("Erreur lors de l'execution de la requete: ");
+        if($resultat){
+            header("location: dh.php?msg=added $nom");
+        }
     }
+    
 
 }
 
@@ -96,19 +100,19 @@ if (isset($_POST['submit'])) {
                 <div class="row">
                     <div class="row">
                         <label style="color:#ffffffff ;" class="log">Product Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="name">
+                        <input type="text" class="form-control" name="name" placeholder="name" required>
                     </div>
                     <div class="row">
                         <label class="log" style="color:#ffffffff ;">quantity</label>
-                        <input type="text" class="form-control" name="qte" placeholder="quantity">
+                        <input type="text" class="form-control" name="qte" placeholder="quantity" required>
                     </div>
                     <div class="row">
                         <label class="log" style="color:#ffffffff ;">Product Price</label>
-                        <input type="text" class="form-control" name="price" placeholder="Price">
+                        <input type="text" class="form-control" name="price" placeholder="Price" required>
                     </div>
                     <div class="row">
                         <label class="log" style="color:#ffffffff ;">Images</label>
-                        <input type="file" class="form-control" name="image" placeholder="Price">
+                        <input type="file" class="form-control" name="image" placeholder="Price" required>
                     </div>
                     
                     <div class="row">
@@ -125,10 +129,10 @@ if (isset($_POST['submit'])) {
                         </select>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col" style="position: absolute; left: 370px;">
                     <div class="sub">
-                    <button  type="submit" class="btn btn-success mb-4" name="submit">Save</button>
-                    <a href="dh.php" class="btn btn-danger mb-4">Cancel</a>
+                    <button type="submit" class="btn btn-success m-1" name="submit">Save</button>
+                    <a href="dh.php" class="btn btn-danger m-1">Cancel</a>
                 </div>
             </div>
             </form>

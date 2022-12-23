@@ -3,18 +3,19 @@ include "connection.php";
 $ID=$_GET['id-product'];
 
 if (isset($_POST['submit'])) {
-    $nom = isset($_POST["name"]) ? $_POST["name"] : null;
+    if(isset($_POST["name"])){ $name = $_POST["name"];}else{ $name = null;}
     $price = isset($_POST["price"]) ? $_POST["price"] : null;
     $category = isset($_POST["category"]) ? $_POST["category"] : null;
     $qanti = isset($_POST["qte"]) ? $_POST["qte"] : null;
-
-    $sql ="UPDATE  `products` SET `label`='$nom',`quantity`=$qanti,`price`=$price ,`id-category`=$category  WHERE `id-product`=$ID" ;
+    if($nom == NULL || $qanti== NULL || $price== NULL || $image == NULL || $category== NULL){
+        header("location : dh.php?msg=error");
+    }else{
+      $sql ="UPDATE `products` SET `label`='$nom',`quantity`=$qanti,`price`=$price ,`id-category`=$category  WHERE `id-product`=$ID" ;
       $resultat = mysqli_query($conn,$sql);
       if ($resultat) {
-        header("Location:dh.php");
+        header("Location:dh.php?msg=edited in id:$ID");
       }
-    // $image = "uploads/" . $_FILES["fileToUpload"]["name"];
-    // $resulta->execute();
+    }
 }
 
 ?>
