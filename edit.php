@@ -74,25 +74,11 @@ if (isset($_POST['submit'])) {
                         <label class="log" style="color:#ffffffff ;">Product Price</label>
                         <input type="text" class="form-control" name="price" value="<?php echo $row['price'] ?>">
                     </div>
-                    <div class="row">
-                        <label class="log" style="color:#ffffffff ;">Category</label>
-                        <select class="form-control" name="category" id="category" onChange="getSubCat(this.value);" required="">
-                            <option value="">Select Category </option>
-                            <?php
-                            $ret = mysqli_query($conn, "SELECT * FROM `category`");
-                            foreach ($ret->fetch_all(MYSQLI_ASSOC) as $row) {
-                            ?>
-                                <option value="<?php echo $row['id']; ?>"> <?php echo $row['label']; ?></option>
-                            <?php } ?>
-
-                        </select>
-
-                    </div>
                 </div>
-                <div class="col">
+                <div class="col" style="position: absolute; left: 334px;">
                     <div class="sub">
-                    <button  type="submit" class="btn btn-success mb-4" name="submit">Update</button>
-                    <a href="dh.php" class="btn btn-danger mb-4">Cancel</a>
+                    <button type="submit" class="btn btn-success m-1" name="submit">Save</button>
+                    <a href="dh.php" class="btn btn-danger m-1">Cancel</a>
                 </div>
             </div>
             </form>
